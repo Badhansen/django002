@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import PostListAPIView, PostDetailAPIView, UserListAPIView, UserDetailAPIView
+from rest_framework.routers import SimpleRouter
+from .views import UserViewSet, PostViewSet
 
 
-urlpatterns = [
-    path('users/', UserListAPIView.as_view()), # new
-    path('users/<int:pk>/', UserDetailAPIView.as_view()),
-    path('<int:pk>/', PostDetailAPIView.as_view()),    
-    path('', PostListAPIView.as_view()),
-]
+router = SimpleRouter()
+router.register('users', UserViewSet, basename='users')
+router.register('', PostViewSet, basename='posts')
+
+
+urlpatterns = router.urls
