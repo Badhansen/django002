@@ -1,3 +1,7 @@
+I tried this book for learning and developing my skills (**Django for APIs 3.1**) thanks William S. Vincent for this awesome book.
+
+![](https://github.com/Badhansen/django002/blob/master/images/books.jpg)
+
 To contribute or run this project, follow the steps below:
 ### 1. Clone the repository
 
